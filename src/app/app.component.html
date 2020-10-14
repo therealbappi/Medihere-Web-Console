@@ -1,25 +1,33 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
 <div class="login-card">
   <div class="card">
-    <h3 class="card-topic">Sign Up</h3>
-    <div class="row">
-    <div class="frame">
-      <img src="assets/images/login_screen_image.png" alt="Pharmacy Image">
-    </div>
+    <h3 class="card-topic">Pharmacy Panel Login</h3>
     <div class="form" *ngIf="!isSignedIn">
       <!-- <h2>Sign up</h2> -->
-      <input type="text" #emailSignup /><br>
-      <input type="text" #passwordSignup /><br>
-      <button (click)="onSignup(emailSignup.value,passwordSignup.value)">Sign up</button>
-    </div>
+      <div class="input-icons">
+        <!-- <form class="form-design"> -->
+          <div class="text-field-design">
+            <i class="fa fa-envelope icon"></i>
+            <input class="text-field" type="text" placeholder="Email" #email required /><br>
+          </div>
+          <div class="text-field-design">
+            <i class="fa fa-lock icon"></i>
+            <input class="text-field" type="password" placeholder="Password" #password required /><br></div>
+          <button class="sign-in-button" type="submit" (click)="onSignin(email.value,password.value)">LOGIN</button>
+        <!-- </form> -->
+      </div>
     </div>
   </div>
 </div>
 
 
 <div *ngIf="false">
-  <h2>Sign In</h2>
-  <input type="text" #email />
-  <input type="text" #password />
-  <button (click)="onSignin(email.value,password.value)">Sign in</button>
+  <h2>Sign Up</h2>
+  <input class="text-field" type="text" placeholder="Email" #emailSignup /><br>
+  <input class="text-field" type="password" placeholder="Password" #passwordSignup /><br>
+  <button class="sign-up-button" (click)="onSignup(emailSignup.value,passwordSignup.value)">Sign up</button>
 </div>
 <app-home *ngIf="isSignedIn" (isLogout)="handleLogout()"></app-home>
