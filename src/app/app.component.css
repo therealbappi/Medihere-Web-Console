@@ -1,0 +1,43 @@
+  .card {
+      /* max-width: 400px; */
+      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+      /* margin: auto; */
+      width: 50%;
+       border: 3px solid green;
+      padding: 10px;
+      text-align: center;
+      align-content: center; 
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      border-radius: 25px;
+  }
+
+  .login-card{
+      height: 100%;
+      background-image: linear-gradient(to bottom right, #8223fc, #0d05ab);
+  }
+
+  .card-topic{
+      align-content: center;
+      text-align: center;
+  }
+
+  .frame{  
+    width: 250px;
+    height: 200px;
+    margin: 20px;
+    position: relative;
+    display: flex;
+}    
+img{  
+    max-height: 100%;  
+    max-width: 100%; 
+    position: absolute;  
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+}
