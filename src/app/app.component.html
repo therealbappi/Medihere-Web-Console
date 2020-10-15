@@ -2,27 +2,55 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<div class="login-card">
-  <div class="card">
-    <h3 class="card-topic">Pharmacy Panel Login</h3>
-    <div class="form" *ngIf="!isSignedIn">
-      <!-- <h2>Sign up</h2> -->
-      <div class="input-icons">
-        <!-- <form class="form-design"> -->
-          <div class="text-field-design">
-            <i class="fa fa-envelope icon"></i>
-            <input class="text-field" type="text" placeholder="Email" #email required /><br>
-          </div>
-          <div class="text-field-design">
-            <i class="fa fa-lock icon"></i>
-            <input class="text-field" type="password" placeholder="Password" #password required /><br></div>
-          <button class="sign-in-button" type="submit" (click)="onSignin(email.value,password.value)">LOGIN</button>
-        <!-- </form> -->
+<div class="container-fluid background" *ngIf="!isSignedIn">
+  <div class="row">
+    <div class="col col-card">
+      <div class="card">
+        <div class="container">
+          <span class="align-middle">
+            <div class="row align-items-center card-content">
+              <div class="col-md-6 col-img">
+                <img src="assets/images/login_screen_image.png">
+              </div>
+              <div class="col-md-6">
+                <h3 class="card-topic">Pharmacy Console<br>Login</h3>
+                <div class="form" *ngIf="!isSignedIn">
+                  <div class="input-icons">
+                    <div class="text-field-design">
+                      <i class="fa fa-envelope icon"></i>
+                      <input class="text-field" type="text" placeholder="Email" #email
+                        (focus)="errorMessage=true" /><br>
+                    </div>
+                    <div class="text-field-design">
+                      <i class="fa fa-lock icon"></i>
+                      <input class="text-field" type="password" placeholder="Password" #password
+                        (focus)="errorMessage=true" /><br>
+                    </div>
+                    <!-- <div class="error"> -->
+                    <div class="row" *ngIf="!errorMessage">
+                      <div class="col-md error-icon">
+                        <!-- <i class="fa fa-exclamation-circle icon2"></i> -->
+                        <!-- </div>
+                      <div class="col-md-8 error-message"> -->
+                        <p class="error">
+                          <i class="fa fa-exclamation-circle error-icon"></i>
+                          {{errorMessageText}}
+                        </p>
+                      </div>
+                    </div>
+                    <!-- </div> -->
+                    <button class="sign-in-button" type="submit"
+                      (click)="onSignin(email.value,password.value)">LOGIN</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </span>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
 
 <div *ngIf="false">
   <h2>Sign Up</h2>
