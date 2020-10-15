@@ -1,4 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@font-face {
+    font-family: sf;
+    src: url(src/assets/SF-Pro-Display-Regular.ttf);
+}
+
+html, body {
+    height: 100%;
+    font-family: sf !important;
+}
+
+body {
+    margin: 0;
+    font-family: sf !important;
+}

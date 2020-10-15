@@ -1,0 +1,125 @@
+.sidenav-container {
+  margin-left: 50px;
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  background-color: #002535;
+}
+
+.sidenav-fixed {
+  width: 60px;
+  background-color: #003851;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.top-panel-title {
+  margin-left: 20px;
+}
+
+.sidenav-list-fixed {
+  margin-top: 10px;
+}
+
+.sidenav .mat-toolbar {
+  margin-left: 20px;
+  background-color: #002535;
+  width: 180px;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #04415d;
+}
+
+.logout-text {
+  position: absolute;
+  bottom: 0;
+  left: 20;
+  right: 0;
+  width: 10px;
+  display: flex;
+  background-color: #011923;
+}
+
+.logout-text-1 {
+  margin-left: 20px;
+  color: white;
+}
+
+.logout-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  color: white;
+  background-color: #002c40;
+}
+.logout-icon:hover {
+  background-color: #012433;
+}
+
+.logout-text:hover {
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  color: white;
+  background-color: #011017;
+}
+
+.icon-1 {
+  margin-left: 5px;
+}
+
+.side-button {
+  border-width: 0px;
+  outline-width: 0px;
+  margin-top: 12px;
+  margin-left: 8px;
+  color: white;
+  background-color: #f74238;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.mat-toolbar {
+  color: white
+}
+
+.menu-items {
+  color: white;
+  margin-left: 20px;
+}
+
+.menu-icon-1 {
+  color: white;
+  margin-left: 4px;
+}
+
+.menu-icon-2 {
+  color: white;
+  margin-left: 3px;
+}
+
+.menu-icon:hover {
+  background-color: #002c40;
+}
+
+.menu-item-1:hover {
+  background-color: #011923;
+}
+
+.is-active {
+  color: white;
+}
+
+.icon {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.logout {
+  vertical-align: bottom;
+  color: red;
+}

@@ -31,12 +31,10 @@ export class AppComponent implements OnInit {
     if (email !== '' && password !== '') {
       var errorMsg = false;
       await this.firebaseService.signin(email, password)
-      .catch(function (error) {
-        if (error !== null) {
+        .catch(function (error) {
           errorMsg = true;
-        }
-        console.log('awdawwwww')
-      })
+          console.log('awdawwwww')
+        })
 
       if (errorMsg) {
         this.errorMessageText = "Wrong username or password";

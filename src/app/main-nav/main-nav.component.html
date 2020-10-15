@@ -1,0 +1,53 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'over'" [opened]="false">
+    <mat-toolbar>Side Panel</mat-toolbar>
+    <mat-nav-list class="sidenav-list">
+      <a mat-list-item href="#" class="menu-item-1"><div class="menu-items">Home</div></a>
+      <a mat-list-item href="#" class="menu-item-1"><div class="menu-items">Previous Orders</div></a>
+      <a mat-list-item href="#" class="menu-item-1"><div class="menu-items">Personal Profile</div></a>
+      <a mat-list-item href="#" class="logout-text"><div class="logout-text-1" (click)="logout()">Log Out</div></a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <!-- <button class="side-button" type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button> -->
+      <h1 class="top-panel-title">Medihere Pharmacy Console</h1>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<mat-sidenav-container class="sidenav-container1">
+  <mat-sidenav #drawer class="sidenav-fixed" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'side' : 'side'" [opened]="true">
+    <button class="side-button" type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+    <mat-nav-list class="sidenav-list-fixed">
+      <a mat-list-item href="#" class="menu-icon">
+        <i class="fa fa-home fa-lg menu-icon-1"></i>
+      </a>
+      <a mat-list-item href="#" class="menu-icon">
+        <i class="fa fa-file-text-o fa-lg menu-icon-1"></i>
+      </a>
+      <a mat-list-item href="#" class="menu-icon">
+        <i class="fa fa-user-circle-o fa-lg menu-icon-2"></i>
+      </a>
+      <a mat-list-item class="logout-icon" (click)="logout()">
+        <i class="fa fa-sign-out fa-lg icon-1"></i>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- <mat-toolbar color="primary">
+      <button class="side-button" type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Medihere Pharmacy Console</span>
+    </mat-toolbar> -->
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
